@@ -1,0 +1,56 @@
+/*stuff I want on every element on the page*/
+body {
+	background-color: white;
+	font-family: "Roboto Slab", serif;
+	color: #B2002E;
+	text-align: center;
+}
+
+a {
+	color: #CC1E4B;
+	text-decoration: none;
+}
+
+a:hover {
+	text-transform: uppercase;
+}
+
+footer {
+	clear:both;
+}
+
+table {
+	margin: auto;
+}
+
+td {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+#left_picture {
+	display:inline-block;
+	float:left;
+	margin-left:4em;
+}
+
+#right_links {
+	display:inline-block;
+	margin-right:4em;
+	float: right;
+	padding-bottom: 6.5em;
+}
+
+.yellow_round {
+	background-color: #FFEFA0;
+	border-radius:25px;
+	padding: 25px;
+}
+
+.blue_round {
+	background-color: #3ECEFF;
+	border-radius: 25px;
+	margin-top:25px;
+	margin-bottom:25px;
+	padding:25px;
+}
