@@ -1,4 +1,5 @@
-[My Site](http://kb-diangelo.github.io/index.html)
+[My Site!](http://kb-diangelo.github.io/index.html)
+[My Blog Post #1](http://kb-diangelo.github.io/blog/git.html)
 
 * What did you learn about CSS padding, borders, and margin by doing this challenge?
 
@@ -14,4 +15,4 @@ My wireframe was so simple that it was not very difficult to get things approxim
 
 * What did you learn about adding and formatting elements with CSS in this challenge?
 
-I learned/had reinforced that dividing elements properly using <div>s, <section>s, <aside>s etc is very important. Thinking of each element as a box with its own padding, border, and margin, was also important. 
+I learned/had reinforced that dividing elements properly using divs, sections, asides etc is very important. Thinking of each element as a box with its own padding, border, and margin, was also important. 
