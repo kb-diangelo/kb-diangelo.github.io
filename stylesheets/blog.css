@@ -4,3 +4,54 @@ body {
 	color: #B2002E;
 	text-align: left;
 }
+
+#title {
+	text-align: center;
+}
+
+#example1 {
+	text-align:center;
+	background-color: #F191FC;
+	padding: 1em;
+}
+
+#example2 {
+	display:inline-block;
+	text-align:center;
+	background-color:#78FF92;
+	margin: 1em;
+	padding: 1em;
+	border-style: dotted;
+	border-color: black;
+	border-width:5px;
+
+}
+
+#example3 {
+	display:inline-block;
+	text-align:center;
+	background-color:#AAB2FF;
+	margin: 1em;
+	padding: 1em;
+	border-radius:40px;
+}
+
+#example4 {
+	display:inline-block;
+	text-align:center;
+	background-color:#F7FCF4;
+	margin: 1em;
+	padding: 1em;
+	border-top-style: solid;
+	border-bottom-style:solid;
+	border-right-style:dashed;
+	border-left-style:dashed;
+	border-width:3px;
+}
+
+#illustration {
+	display:block;
+	margin:auto;
+	margin-top:2em;
+	margin-bottom:2em;
+}
