@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+  <title>Technical Blog</title>
+  <meta charset="UTF-8">
+ <link type="text/css" rel="stylesheet" href="../stylesheets/default.css" />
+ <link type="text/css" rel="stylesheet" href="../stylesheets/blog.css" />
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css">
+</head>
+
+<main>
+  <h1 class="yellow_round">Week 3</h1>
+  <h2 class="blue_round">Margin, Border, and Padding in CSS</h2>
+  
+
+  <section class="yellow_round">
+  <h4>11/09/2015</h4>
+    <p>
+      Using CSS (Cascading Style Sheets) to space things out the way you want them to be can be tricky! In order to get the website look you want, it's important to understand margin, border, and padding.
+    </p>
+    <p>
+      Let's back up just a little first. Your webpage is essentially made up of boxes. These boxes may be something like an image. They could be divisions you made in the HTML, like <em>div</em>s or a <em>section</em>s. But everything on your page more or less exists in a box.
+    <p>
+      These boxes have 3 properties that decide how the boxes around them look and are distance from other boxes on the page: margin, border, and padding. The first one I'm going to introduce, though it sits between the other two, is <strong>border</strong>. I found that when I was learning about margin, border, and padding, border was the hardest to understand but once it "clicked" everything else fell into place.
+    <p>
+      A <em>border</em> is what <em>defines the edge of an element</em> that is to say, the visible box. It is outside the content, but borders it, hence the name. The tricky thing about borders is that they are by default, invisible. In fact they have the <em>border-style</em> of <em>none</em>. So if you're not thinking about borders, it's easy to get confused, because by default it looks like they're not even there!
+    <p>
+      Of course even an invisible border becomes visible when there's a difference between the inside of the element and the outside. Let's take for example a <em>div</em> that has a different background color. Where that color ends, and the rest of the page begins, that's the border!
+      <div id="example1">This purple box has an invisible border, but you can tell it's got one by the way the purple ends!</div>
+    <p>
+      If you do want a defined border around your content that's easy enough. Just go into your stylesheet and set the <em>border-style</em> to <em>solid</em>. There are other things you can do with borders too: make them dotted, dashed, double. You can set the top, right, left, and bottom borders seperately too. For more information on what sorts of borders you can make, check out <a href="http://www.w3schools.com/cssref/pr_border-style.asp">this lesson</a> from w3schools.com. You can change the color of a border with <em>border-color</em> and the thickness of a border with <em>border-width</em>. Again, these can be set seperately for each side of the box. Borders can also be rounded off with the </em>border-radius</em> property where 0 (not rounded) is the default. <em>Border-radius</em> can be set seperately for each corner to make interesting shapes out of of your element. For some tips on using <em>border-radius</em> check out <a href="https://css-tricks.com/almanac/properties/b/border-radius/">CSS Tricks' lesson</a> on the subject. 
+      </p>
+
+<div>
+      <div id="example2">Example 2</div>
+      <div id="example3">Example 3</div>
+      <div id ="example4">Example 4</div>
+      <br>
+    <img src="../imgs/example2.png">
+    <img src="../imgs/example3.png">
+    <img src="../imgs/example4.png">
+    <br>
+</div>
+
+<p>
+  Now that we understand where the border sits and what it can look (or not look) like, we can talk about margin and padding. These concepts are fairly simple once we understand the border. Basically, the <strong>padding</strong> is the <em>empty space that sits between the content and the border</em>, and the <strong>margin</strong> is the <em>empty space that sits between the border and the other elements on the page or the edge of the page</em>. </p> <br>
+<img src="../imgs/illustration.png" class="illustration" />
+<p>
+  The only thing we've done with margin and padding is change how big they are. That's simple enough: you can change the <em>margin</em> and <em>padding</em> to any value you want in px (pixels), % (percentage of the page), or em (a value equal to the default text size in pixels). And as you might expect, you can set values for top, bottom, left and right separately.For example, the above diagram about how the margin and padding works has top and bottom margins like so...</p><br>
+  <img src="../imgs/illustration_illustration.png" class="illustration" />
+  <p> You can also set <em>margin</em> to <em>auto</em> to center things on the page. 
+  </p>
+  <p><strong>So in summary... </strong>
+    <ul>
+      <li>The <strong>padding</strong> defines the space between the content and the border.</li>
+      <li>The <strong>border</strong> defines the edge of an element, and may be invisible.</li>
+      <li>The <strong>margin</strong> defines the space between the element and other elements or the edge of the page</li>
+    </ul>
+    <p>
+    <p>
+      I hope you enjoyed my second blog post about what I learned at DBC!
+    </p>
+
+
+
+  </section>
+</main>
+</html>
