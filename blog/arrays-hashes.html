@@ -62,7 +62,32 @@
       </div>
       The code above, therefore, will iterate over all the values in my_array and <em>puts</em> each one to the console.
     </p>
-    <p>A hash is similar to an array in that it is a list of values...
+    <p>A <strong>hash</strong> is similar to an array in that it is a list of values but instead of these values having <em>indices</em> they have what are known as <em>keys</em>. A key is a value associated with the value stored in the hash. It can technically be any object, but the most common keys are strings and symbols.
+    </p>
+    <p>Like an array, a hash can eithe be created with a constructor, in this case <em>Hash.new()</em> or literally.
+      <div class="code">
+        # using a constructor<br>
+        my_hash = Hash.new()<br>
+        my_hash["favorite animal"] = "axolotl"<br>
+        my_hash[:favorite_food] = "beets"<br>
+        <br>
+        # using literal notation <br>
+        # there are a couple ways to do this </br>
+        # if your keys are symbols you can put the : <br>
+        # at the end of the symbol instead of the front: <br>
+        my_hash = {favorite_animal: "axolotl", favorite_food: "beets"}<br>
+        # if your keys are strings, other values, symbols, or a mix, <br>
+        # you can use the "hash rocket"<br>
+        my_hash = {:favorite_animal => "axolotl", "favorite food" => "beets"}<br>
+        # you can also add these values one at a time <br>
+        # like we did in the above example<br>
+      </div>
+    <p> To iterate over a hash, you can use <em>.each</em> with two placeholder values in the ||, one for the key and one for the value. Alternatively, if you want to iterate over just keys or just values you can use the <em>.each_key</em> or <em>.each_value</em> methods respectively.
+    </p>
+    <p> So why would you use one or the other? Arrays are good when you just need a list of items. Hashes are good when you want to associate a key with a value. To use the example of my favorite things, we could make a array of my favorites: "axolotl", "beets", and so on, but this array probably wouldn't make much sense. When we are storing information that needs some context, ie, a key, a hash is a better choice. 
+    </p><p>
+    I hope you didn't notice that this blog post got less and less thorough and organized as it went on! Technically this assignment was supposed to take an hour but I am kind of a slow writer and I've already spent over two on it. Well, I hope you enjoyed reading about what I learned at DBC this week!</p>
+
   </section>
 </main>
 </html>
