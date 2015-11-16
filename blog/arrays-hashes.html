@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+  <title>Technical Blog</title>
+  <meta charset="UTF-8">
+ <link type="text/css" rel="stylesheet" href="../stylesheets/default.css" />
+ <link type="text/css" rel="stylesheet" href="../stylesheets/blog.css" />
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css">
+</head>
+<main>
+  <h1 class="yellow_round">Week 4</h1>
+  <h2 class="blue_round">Arrays and Hashes</h2>
+  
+
+  <section class="yellow_round">
+  <h4>11/16/2015</h4>
+    <p>
+      This week at DBC, we learned about two really important Ruby data structures: arrays and hashes. These structures are similar in a few ways but there is a critical difference in how you access values in an array vs. in a hash. 
+    </p>
+    <p>
+      <strong>Arrays</strong> are basically ordered lists of information. An array contains a collection of values - which can be any object: integers, strings, other arrays, booleans, etc - all of which have an index that represents their place in the array. These indices start at 0, not 1, as is typical in the computer world. So you can imagine an array as an ordered list of items, starting at 0. 
+    </p>
+      You can create an array in a few ways. The first is to use the constructor <em>Array.new</em>...
+
+      <div class="code">
+        my_array = Array.new()
+      </div>
+      ... which will create a new, empty array. You can add items to the array either by pushing them to the array using << or .push, which will add them to the end of the array ...
+      <div class="code">
+        my_array.push("first item")<br>
+        my_array << "second item"
+      </div>
+      which will, for example, add the strings "first item" and "second item" to the empty array we created in index 0 and 1, respectively, or by specifying what index they should be at ...
+      <div class="code">
+        my_array[2] = "third item" <br>
+        my_array[3] = "fourth item"
+      </div>
+      which will, in this example, add the strings "third item" and "fourth item" to the array we created in index 2 and 3, respectively. We could have even done that in the opposite order, it would have been fine.
+    </p>
+    <p>You can also create an array by using literal notation. You can initialize the array either as an empty array and then add items just like we did when we used the constructor, or add the values when you make the array, seperated by commas.
+      <div class = "code">
+        my_array = [] #creates an empty array<br>
+        my_array << "first item"<br>
+        my_array << "second item"<br>
+        my_array << "third item"<br>
+        my_array << "fourth item"<br>
+      </div>
+      or
+      <div class="code">
+        my_array = ["first item", "second item", "third item", "fourth item"]
+      </div>
+    <p>To access the items in an array, we refer to them by their index. For example ... 
+      <div class="code">
+        my_variable = my_array[3]
+      </div>
+      would assign the value stored in the 3rd index of my_array (the string "fourth item") to my_variable.
+    </p>
+    <p>To iterate over an array, that is, to do something for every value contained in the array, we can use the .each method. The syntax for this is a little more complicated than we've seen before. We need .each and a block bracketed by either <em>do</em>/<em>end</em> or the curly brackets {} to tell Ruby what we're doing for each of these items in the array. We also need a placeholder value bracketed by || (whatever that character is called), to be, as Chris Pine puts it, "the variable that each will use to point to the objects in the array" (<em>Learn to Program 2nd Edition</em> Ch. 8). 
+      <div class ="code">
+        my_array.each do |value|<br>
+          puts value<br>
+        end
+      </div>
+      The code above, therefore, will iterate over all the values in my_array and <em>puts</em> each one to the console.
+    </p>
+    <p>A hash is similar to an array in that it is a list of values...
+  </section>
+</main>
+</html>
