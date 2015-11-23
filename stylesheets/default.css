@@ -54,3 +54,13 @@ td {
 	margin-bottom:25px;
 	padding:25px;
 }
+
+.contact_button { 
+	display: inline-block;
+	background-color: #3ECEFF;
+	border-radius: 25px;
+	margin-top:25px;
+	margin-bottom:25px;
+	padding:25px;
+}
+}
