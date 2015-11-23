@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+  <title>Technical Blog</title>
+  <meta charset="UTF-8">
+ <link type="text/css" rel="stylesheet" href="../stylesheets/default.css" />
+ <link type="text/css" rel="stylesheet" href="../stylesheets/blog.css" />
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css">
+</head>
+<main>
+  <h1 class="yellow_round">Week 5</h1>
+  <h2 class="blue_round">Enumerable#cycle</h2>
+  
+
+  <section class="yellow_round">
+  <h4>11/23/2015</h4>
+    <p>
+      Today we're going to be talking about the enumerable method <em>cycle</em>. I'm going to keep this pretty brief but stick with me!</p>
+    <p><em>cycle</em> is a method found in the <em>enumurable</em> module. This was my first experience with modules but they're a pretty cool idea. A module is kind of like a class in that it is a collection of behaviors: methods, constants, etc. In fact, Class is a subclass of Module. But instead of defining a particular object and its behaviors, modules allow you to share behaviors among certain types of objects, almost like a library of behaviors.</p>
+    <p>So what kinds of objects can use this library? Well, anything with an <em>each</em> method. So that means arrays, hashes, ranges, etc, as well as <em>classes you create as long as you define a .each method for that class!</em> (to make sure that the class has access to enumerable methods when you define the class you need to write <em>include Enumerable</em> when you define it).</p>
+    <p>So now that we know what the enumerable module is, what kind of methods are available in that "library" for us to use with our objects? Today I onl have time to discuss one: cycle. Cycle is fairly simple.</p>
+    <p>.cycle works very similarly to .each but instead of yielding the objects one at a time until the end of the data structure, it yields them over and over forever (or until a <em>break</em>). It takes an optional argument which is an integer number that tells you how many times to, well, cycle. You can also include a code block, just like with .each, that tells the method what to <em>do</em> with each item it picks out of the data structure.
+    </p><p>Let's look at an example...</p>
+    <div class = "code">
+      my_array = ["K", "B", "D"]<br>
+      my_array.cycle(3) {|item| puts item}<br>
+<br>
+      => <br>
+      K<br>
+      B<br>
+      D<br>
+      K<br>
+      B<br>
+      D<br>
+      K<br>
+      B<br>
+      D<br>
+    </div>
+    <p>Here we cycled through my little array 3 times and puts each item to the console. If we didn't include the the (3) argument the cycle would continue forever.</p>
+    <p>Well that's the short version of cycle! I hope you enjoyed reading about what I learned this week at DBC!</p>
+  </section>
+</main>
+</html>
