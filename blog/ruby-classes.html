@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<head>
+  <title>Technical Blog</title>
+  <meta charset="UTF-8">
+ <link type="text/css" rel="stylesheet" href="../stylesheets/default.css" />
+ <link type="text/css" rel="stylesheet" href="../stylesheets/blog.css" />
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css">
+</head>
+
+<main>
+  <h1 class="yellow_round">Week 6</h1>
+  <h2 class="blue_round">Ruby Classes : Modeling the Axolotl Object</h2>
+  
+
+  <section class="yellow_round">
+  <h4>11/30/2015</h4>
+    <p>
+     This is an axolotl. 
+      <img class="image" src="../imgs/twit3.JPG" alt="Ambystoma mexicanum, the axolotl salamander" />
+    Also called the Mexican walking fish, the <a href="https://en.wikipedia.org/wiki/Axolotl">axolotl</a> is a species of salamander that never loses its juvenile gills and spends its entire life cycle in an aquatic habitat. The one pictured above is named Maxolotl, and she is a leucistic (part-albino) female. Just look at how cute she is, with her tiny feet and her pinky gills! Max has been living with me since 2011. 
+      </p>
+      <p>
+    Today we're going to learn about Ruby classes and Max is going to help us. Imagine we wanted to model an axolotl in Ruby. It would have some traits: species name, given name, color (wildtype [brown], leucistic, full albino or golden), age, and favorite food, to start. It would have some behaviors, #eat (of course), #swim, #bump (into the glass) (axolotls don't really get up to much). And we would want to be able to model more than one axolotl without rewriting everything all over again. Enter Ruby classes.
+    </p>
+    <p>
+    In Ruby, a <em>class</em> defines an object: in this case: we're going to define the Axolotl object. Every object in Ruby is an instance of a class. A class is like a bundle of related methods (behaviors) and properties that are shared between different instances of that class (different instances of that object).
+    </p>
+    <p>
+    To create a class in Ruby you use the class keyword and end it with the end keyword. By convention clas names are capitalized.
+    <div class="code">
+      class Axolotl<br>
+      end
+    </div>
+    The first thing you need to do when you create a class is give Ruby instructions on how to create an instance of that class - the object. This is what will be called when you write Object.new(). The name of this method is alwasy the same and, surprisingly, it is NOT #new, but #initialize. When we initialize our axolotl, we're going to give it some traits, that is to say, when we call Axolotl.new we're going to pass it the age, color, and favorite_food arguments.
+    <div class="code">
+      class Axolotl<br>
+      <br>
+      def initialize(name, age, favorite_food)<br>
+      @species = "Ambystoma mexicanum"<br>
+      @name = name<br>
+      @age = age<br>
+      @favorite_food = favorite_food<br>
+      end<br>
+      <br>
+      end
+    </div>
+    We store those values passed to it in what are called <em>instance variables</em>, which are denoted with the @. Unlike local variables, whose scope is whatever they were created in (a method, etc), an instance variable's scope is the whole instance of that class, or the whole object. These values can be shared between methods in that object.Here we store the name, age, and favorite_food in instance variables. We also create an instance variable <em>species</em> that will have the same value for every single axolotl we initialize.
+    </p>
+    <p>
+    So let's give our axolotl some behaviors. We can do this by defining some methods. We're going to create three methods here, #swim, #bump, and #eat. #swim and #bump are going to be quite similar and very simple. 
+    <div class = "code">
+      class Axolotl<br>
+      <br>
+      def initialize(name, age, favorite_food, color)<br>
+      @species = "Ambystoma mexicanum"<br>
+      @name = name<br>
+      @age = age<br>
+      @favorite_food = favorite_food<br>
+      @color = color
+      end<br>
+      <br>
+      def swim<br>
+      puts "#{name} is swimming along happily!"</br>
+      end<br>
+      <br>
+      def bump<br>
+      puts "#{name} is heading right for the glass!"<br>
+      puts "Oh no!"<br>
+      puts "BUMP!"<br>
+      end<br>
+      <br>
+      end
+    </div>
+    As you can see we have access to @name even outside of the intialize method! We can use @name anywhere in the Axolotl class. Now let's create #eat, which is going to be passed a <em>food</em> which we will compare to @favorite_food.
+    <div class ="code">
+      def eat(food)<br>
+      if food == @favorite_food<Br>
+      puts "YUM!! MY FAVORITE"<br>
+      else<br>
+      puts "Eh, I guess I'll eat this."<br>
+      end<br>
+    </div>
+    </p>
+    <p>
+      Finally, we want to be able to read back the values in @age, @species, @favorite_food, and @color, and to be able to read and change the value of @name. We could write methods to do this but if we just want to read and/or write values of instance variables in Ruby classes there's an easier way: the <em>attr</em> methods.
+      <ul>
+        <li><em>attr_reader</em> is a reader/getter method that allows you to read an instance variable</li>
+        <li><em>attr_writer</em> is a writer/setter method that allows to to rewrite an instance variable</li>
+        <li><em>attr_accessor</em> is an accessor method that allows you to do both</li>
+      </ul>
+      In the code, these go above the initialize method and take the following form:
+      <div class = "code">
+        class Axolotl<br>
+        <br>
+        attr_reader :color, :age, :favorite_food, :species <br>
+        attr_accessor :name <br>
+        <br>
+        def intialize(name, age, favorite_food)<br>
+        ...<br>
+        ...<br>
+      </div>
+      Now we have the methods #color, #age, and #favorite_food which will return the value of those instance variables, and the method #name, which will return the value of that instance variable as well as allow you to rename your axolotl. 
+    </p>
+      Now that we've built the Axolotl let's see how it works. 
+      <div class = "code">
+        class Axolotl<br>
+        <br>
+        attr_reader :color, :age, :favorite_food, :species <br>
+        attr_accessor :name <br>
+        <br>
+         def initialize(name, age, favorite_food, color)<br>
+        @species = "Ambystoma mexicanum"<br>
+        @name = name<br>
+        @age = age<br>
+        @favorite_food = favorite_food<br>
+        @color = color
+        end<br>
+        <br>
+        def swim<br>
+        return "#{name} is swimming along happily!"</br>
+        end<br>
+        <br>
+        def bump<br>
+        return "#{name} is heading right for the glass! BUMP!!"<br>
+        end<br>
+        <br>
+         def eat(food)<br>
+        if food == @favorite_food<Br>
+        return "YUM!! MY FAVORITE"<br>
+        else<br>
+        return "Eh, I guess I'll eat this."<br>
+        end<br>
+        <br>
+        end
+      </div>
+      <div class="code">
+        max = Axolotl.new("Maxolotl", 4, "earthworms", "leucistic") #creating Max<br>
+        <br>
+        max.name<br>
+        <br>
+        => "Maxolotl"<br>
+        max.name = "Miss Maxolotl"<br>
+        <br>
+        max.name
+        <br>
+        => "Miss Maxolotl"<br>
+        <br>
+        max.eat("earthworms")<br>
+        <br>
+        => "YUM!! MY FAVORITE"
+      </div>
+      And of course we can create as many axolotls as we want...
+      <div class = "code">
+        bud = Axolotl.new("Buddy", 10, "pellets" "wildtype") #axolotls can live for 15 years<br>
+        sammy = Axolotl.new("Samulotl L. Jackson", 1, "guppies", "golden")
+      </div>
+      ... and treat them the same way we did Max. 
+    </p>
+    <p>
+      Well I hope you enjoyed reading this introduction to classes in Ruby and meeting Maxolotl. If you have any quetions about this material feel free to <a href = "../contact.html">contact me</a> at any time! Thanks for reading!
+      <img class = "image" src="../imgs/Maxolotl.jpg" />
+
+
+
+
+
+
+  </section>
+</main>
