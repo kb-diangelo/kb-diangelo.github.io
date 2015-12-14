@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <title>Technical Blog</title>
+  <meta charset="UTF-8">
+ <link type="text/css" rel="stylesheet" href="../stylesheets/default.css" />
+ <link type="text/css" rel="stylesheet" href="../stylesheets/blog.css" />
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css">
+</head>
+
+<main>
+  <h1 class="yellow_round">Week 8</h1>
+  <h2 class="blue_round">Recursion</h2>
+  
+
+  <section class="yellow_round">
+  <h4>12/13/2015</h4>
+    <p>This week I'm going to give a very short introduction to what, if I remember correctly from the only computer science class I ever took in college, is a pretty central idea in computer science. <strong>Recursion</strong> is a process in which something is nested between larger and smaller versions of itself, like Russian dolls. In computer science, it refers to solving a problem by solving smaller instances of that problem (which may themselves be solved by solving even smaller instances of themselves and so on). Recursion is what happens when you have a function or a method call itself, making a loop.</p>
+    <p>Recursion would have been helpful in solving the factorial problem we had in Week 4. The solution (in Ruby) that I used looked like this:</p>
+    <div class = "code">
+      def factorial(number)<br>
+      if number == 0<br>
+      return 1<br>
+      else<br>
+      total = 1<br>
+      until number == 1<br>
+      total = total * number<br>
+      number = (number-1)<br>
+      end<br>
+      return total<br>
+      end<br>
+      end<br>
+    </div>
+    <p>As you can see, I use a while loop to solve this problem. But recursion offers us a better way. If I allow factorial to call itself...</p>
+    <div class = "code">
+      def factorial(number)<br>
+      if number == 0<br>
+      return 1<br>
+      else<br>
+      return number * factorial(number-1)<br>
+      end<br>
+      end<br>
+    </div>
+    <p>For example if the number we input is 5, the return would be 5 * 4 * 3 * 2 * 1 * 1 = 120. Every time the number was not 0, factorial calls itself and finds a smaller number and multiplies it by the number that it had. Over and over. It's a bit tricky to wrap your head around but basically that's how it works.</p>
+    <p>Recursive functions/methods usually have at least one case like, in the example above, <em>if number == 0</em>, a case in which the function will not recurse, or only up until which it will recurse. This is called the <em>base case</em>. Other case are called the <em>recursive cases</em>. Forgetting to put in a base case can result in a function or method that calls itself forever in an infinite loop, which is clearly something to avoid!</p>
+  </section>
+</main>
