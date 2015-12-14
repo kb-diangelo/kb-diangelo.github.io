@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="stylesheets/default.css" />
+	<link type="text/css" rel="stylesheet" href="stylesheets/cheat_sheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css" />
+	<meta charset="utf-8" />
+	<title>K. B. DiAngelo's Contact Info</title>
+</head>
+
+<header>
+	<h1 class = "yellow_round">Data Types in Ruby: A Cheat Sheet</h1>
+</header>
+<body>
+	<div class = "blue_round">
+		<nav>
+			<table>
+				<tr>
+					<td>
+			<a href="index.html">Index</a>
+		</td><td>
+			<a href="about.html">About Me</a>
+		</td><td>
+			<a href="blog/blog-index.html">Technical Blog</a>
+		</td><td>
+			<a href="projects/projects-index.html">Projects</a>
+		</td><td>
+			<a href="#">Resume</a>
+			</td>
+		</tr>
+			</table>
+		</nav>
+	</div>
+	<div class = "yellow_round">
+		<h2>Strings</h2>
+		<p> A string contains one or more characters as text. Strings must always be surrounded by single (') or double (") quotation marks. The characters in a string can be numbered starting from 0, and substrings or characters accessed by these indices. Strings, unlike symbols, are mutable and can be overwritten.</p>
+		<p>Useful string methods!</p>
+		<ul>
+			<li>#capitalize/capitalize! : capitalizes the string/li>
+			<li>#upcase/#upcase!, #downcase/#downcase! : makes every character upper or lower case</li>
+			<li>#length : gets us the length in characters of the string</li>
+			<li>#reverse/#reverse! : reverses the string</li>
+			<li>#to_i : converts a string (of digits) into an integer</li>
+			<li>#to_sym, #intern : converts a string into a symbol</li>
+		</ul>
+		<h2>Integers & Floats</h2>
+		<p> These are the basic numerical data types in Ruby. Integers are whole numbers while floats contain a decimal point. (1 is an integer, but 1.0, 1.1, 1.2, etc are floats.) Remember when dividing integers, the nearest whole number rounded down will be returned. Integers and floats can be converted to strings with the #to_s method.
+		<h2>Arrays</h2>
+		<p>These are data structures that contain objects with an ordered integer index, counting from 0. An array is bracketed by square brackets []. Arrays can contain more than one type of object and the objects can be anything.
+		<p>Useful array methods!</p>
+		<ul>
+			<li>#each</li>
+			<li>#each_index</li>
+			<li>#map/map! & synonymous #collect/collect!</li>
+			<li>#cycle</li>
+			<li>#flatten</li>
+			<li>#include?</li>
+			<li>#join</li>
+			<li>#length</li>
+			<li>#pop</li>
+			<li>#push</li>
+			<li>#reverse</li>
+			<li>#select/#select!</li>
+			<li>#slice/#slice!</li>
+			<li>#sort/#sort!</li>
+		</ul>
+		<h2>Hashes</h2>
+		<p>A kind of data structure made up of key-value pairs, in which the keys are usually strings or symbols and the values are any kind of object. </p>
+		<p>Useful hash methods! Many that are shared with the Array class come from the Enumerable module.</p>
+		<ul>
+			<li>#each</li>
+			<li>#each_key, #each_value</li>
+			<li>#has_key?, #has_value?</li>
+			<li>#key/#key!</li>
+			<li>#select/#select!</li>
+		</ul>
+	</div>
+</body>
+<footer class="blue_round">
+	Copyright K. B. DiAngelo 2015
+</footer>
+</html>
