@@ -7,11 +7,36 @@
  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css">
 </head>
 
+<header>
+  <h1 class = "yellow_round" id = "title">K. B. DiAngelo;s Technical Blog</h1>
+</header>
+<body>
+  <div class = "blue_round">
+    <nav>
+      <table>
+        <tr>
+          <td>
+      <a href="../contact.html">Contact</a>
+    </td><td>
+      <a href="../about.html">About Me</a>
+    </td><td>
+      <a href="../index.html">Index</a>
+    </td><td>
+      <a href="../projects/projects-index.html">Projects</a>
+    </td><td>
+      <a href="#">Resume</a>
+      </td>
+    </tr>
+  </table>
+    </nav>
+  </div>
+
+
 <main>
-  <h1 class="yellow_round">Week 7</h1>
-  <h2 class="blue_round">JavaScript Constructor Functions vs. Ruby Classes</h2>
+ 
   <section class="yellow_round">
-  <h4>12/07/2015</h4>
+  <h1>Week 7</h1>
+  <h2>JavaScript Constructor Functions vs. Ruby Classes</h2><h4>12/07/2015</h4>
     <p>
       Last week we went pretty in depth about <a href="ruby-classes.html">Ruby classes</a> but as we are learning more and more about JavaScript, we're going to touch on something that's sort of an equivalent (but not really) to creating a class in Ruby: JavaScript <em>constructor functions</em>. 
     </p>
@@ -56,3 +81,9 @@ var billy = new Axolotl("Billy Bob", 1, "wildtype");<br>
 <p> So what are the key differences between Ruby classes and JavaScript constructor functions, besides the syntax? Well, like I said before, a Ruby class can define any kind of new object, but a JavaScript constructor can only create a new instance of the "object" data structure. There is also a matter of inheritance. Ruby classes can inherit from other classes, and be nested into one another, but constructor functions (AS I HAVE DESCRIBED THEM HERE) cannot (there may be other ways to inherit in JavaScript that I haven't learned about yet!). Also, in Ruby, if you want the ability to read/write to the properties of an instance of a class, you have to include that when you define the class (with <em>attr_reader</em>, <em>attr_writer</em>, and <em>attr_accessor</em>). In JavaScript, you can always(?) access the properties of an object built with a constructor using dot notation. 
   </section>
 </main>
+</body>
+<footer class="blue_round">
+  Copyright K. B. DiAngelo 2015
+</footer>
+
+</html>
