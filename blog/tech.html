@@ -7,12 +7,41 @@
  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css">
 </head>
 
+
+<header>
+  <h1 class = "yellow_round" id = "title">K. B. DiAngelo's Technical Blog</h1>
+</header>
+<body>
+  <div class = "blue_round">
+    <nav>
+      <table>
+        <tr>
+          <td>
+      <a href="../contact.html">Contact</a>
+    </td><td>
+      <a href="../about.html">About Me</a>
+    </td><td>
+      <a href="../index.html">Index</a>
+    </td><td>
+      <a href="../projects/projects-index.html">Projects</a>
+    </td><td>
+      <a href="#">Resume</a>
+      </td>
+    </tr>
+  </table>
+    </nav>
+  </div>
+
+
+
+
 <main>
-  <h1 class="yellow_round">Week 8</h1>
-  <h2 class="blue_round">Recursion</h2>
+  
   
 
   <section class="yellow_round">
+  <h1>Week 8</h1>
+  <h2>Recursion</h2>
   <h4>12/13/2015</h4>
     <p>This week I'm going to give a very short introduction to what, if I remember correctly from the only computer science class I ever took in college, is a pretty central idea in computer science. <strong>Recursion</strong> is a process in which something is nested between larger and smaller versions of itself, like Russian dolls. In computer science, it refers to solving a problem by solving smaller instances of that problem (which may themselves be solved by solving even smaller instances of themselves and so on). Recursion is what happens when you have a function or a method call itself, making a loop.</p>
     <p>Recursion would have been helpful in solving the factorial problem we had in Week 4. The solution (in Ruby) that I used looked like this:</p>
@@ -44,3 +73,8 @@
     <p>Recursive functions/methods usually have at least one case like, in the example above, <em>if number == 0</em>, a case in which the function will not recurse, or only up until which it will recurse. This is called the <em>base case</em>. Other case are called the <em>recursive cases</em>. Forgetting to put in a base case can result in a function or method that calls itself forever in an infinite loop, which is clearly something to avoid!</p>
   </section>
 </main>
+</body>
+<footer class="blue_round">
+  Copyright K. B. DiAngelo 2015
+</footer>
+</html>
